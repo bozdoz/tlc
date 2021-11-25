@@ -4,8 +4,7 @@ import useSiteMetadata from "../hooks/useSiteMetadata"
 
 const GATSBY_RECAPTCHA_SITE_KEY = process.env.GATSBY_RECAPTCHA_SITE_KEY
 
-// TODO: just /send
-const SEND_URL = "https://beta.tantallonlaserclinic.ca/send"
+const SEND_URL = "/send"
 
 /** @typedef {'content' | 'contact_email' | 'contact_name' } Fields */
 /** @type {Fields[]} */
