@@ -5,6 +5,7 @@
 - Gatsby
 - Mailgun
 - Cloudflare Workers
+- Vercel
 
 ## TODOS
 
