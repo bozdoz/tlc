@@ -1,0 +1,12 @@
+.cache
+.vscode
+node_modules
+public
+.gitignore
+.prettierrc
+README.md
+LICENSE
+.eslint*
+
+.env
+static/css/
