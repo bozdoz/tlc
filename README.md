@@ -3,8 +3,7 @@
 ## Tech
 
 - Gatsby
-- Mailgun
-- Cloudflare Workers
+- Mailgun & Cloudflare Workers (https://github.com/bozdoz/mailgun-cloudflare-worker)
 - Vercel
 
 ## TODOS
