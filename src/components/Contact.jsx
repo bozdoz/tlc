@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/useSiteMetadata"
 
 const GATSBY_RECAPTCHA_SITE_KEY = process.env.GATSBY_RECAPTCHA_SITE_KEY
+const GATSBY_GOOGLE_MAPS_KEY = process.env.GATSBY_GOOGLE_MAPS_KEY
 
 const SEND_URL = "/send"
 
@@ -136,8 +137,7 @@ export default function Contact() {
                 width="100%"
                 frameBorder="0"
                 style={{ border: 0 }}
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDIqf1m1PV88wK3iQ83n2lKDvK9DjFr-sE
-        &q=Tantallon+Laser+Clinic"
+                src={`https://www.google.com/maps/embed/v1/place?key=${GATSBY_GOOGLE_MAPS_KEY}&q=Tantallon+Laser+Clinic`}
                 allowFullScreen
               ></iframe>
               <p>
