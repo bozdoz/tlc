@@ -247,13 +247,9 @@ $logoheight: 100px;
 #banner {
   background-color: #fff868;
   text-align: center;
-  display: none;
-  a {
-    color: #222;
-  }
-  p {
-    margin-bottom: -1px;
-  }
+  color: #222;
+  display: block;
+  width: 100%;
 }
 
 #main-navigation {

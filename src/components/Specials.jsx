@@ -1,5 +1,13 @@
 import React from "react"
 
+// TODO: move to config, and optionally hide Specials in nav
+const specials = [
+  {
+    header: "Summer Special!",
+    details: "Underarms $60.00 per session",
+  },
+]
+
 export default function Specials() {
   return (
     <>
@@ -12,15 +20,17 @@ export default function Specials() {
               <h3 className="article-subtitle">Act now and save!</h3>
             </header>
             <div className="page-content">
-              <div className="special-offer">
-                <h2>Buy 2 Treatments, Get 2 Free!</h2>
-                <p>Contact us and ask for this special. New clients only.</p>
-                <p>
-                  <a className="btn btn-primary btn-lg" href="#contact">
-                    Click here
-                  </a>
-                </p>
-              </div>
+              {specials.map(({ header, details }, i) => (
+                <div className="special-offer" key={i}>
+                  <h2>{header}</h2>
+                  <p>{details}</p>
+                  <p>
+                    <a className="btn btn-primary btn-lg" href="#contact">
+                      Click here
+                    </a>
+                  </p>
+                </div>
+              ))}
             </div>
           </article>
         </section>
