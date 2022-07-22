@@ -4,13 +4,26 @@ const bannerKey = "moving2022-33"
 // october 1, 2022
 const bannerDate = new Date(2022, 10, 1)
 
+const safeLocalStorage = (() => {
+  /** @type {Storage} */
+  const ls =
+    typeof window === "undefined"
+      ? {
+          getItem() {},
+          setItem() {},
+        }
+      : localStorage
+
+  return ls
+})()
+
 const Banner = () => {
   const [bannerVisible, setBannerVisible] = useState(
-    !window?.localStorage.getItem(bannerKey)
+    !safeLocalStorage.getItem(bannerKey)
   )
 
   const handleClick = useCallback(() => {
-    window?.localStorage.setItem(bannerKey, "1")
+    safeLocalStorage.setItem(bannerKey, "1")
     setBannerVisible(false)
   }, [])
 
