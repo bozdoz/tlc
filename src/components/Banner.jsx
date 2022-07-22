@@ -6,11 +6,11 @@ const bannerDate = new Date(2022, 10, 1)
 
 const Banner = () => {
   const [bannerVisible, setBannerVisible] = useState(
-    !localStorage.getItem(bannerKey)
+    !window?.localStorage.getItem(bannerKey)
   )
 
   const handleClick = useCallback(() => {
-    localStorage.setItem(bannerKey, "1")
+    window?.localStorage.setItem(bannerKey, "1")
     setBannerVisible(false)
   }, [])
 
