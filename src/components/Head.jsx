@@ -12,6 +12,13 @@ export default function Head({ title: passedTitle }) {
     primary_color,
     phone,
     email,
+    addressLocality,
+    addressRegion,
+    postalCode,
+    streetAddress,
+    lat,
+    lng,
+    mapZoom,
   } = siteMetadata
   return (
     <Helmet>
@@ -76,10 +83,10 @@ export default function Head({ title: passedTitle }) {
      	"@type": "LocalBusiness",
      	"address": {
        "@type": "PostalAddress",
-       "addressLocality": "Upper Tantallon",
-       "addressRegion": "NS",
-       "postalCode":"B3Z0H5",
-       "streetAddress": "1033 Westwood Blvd."
+       "addressLocality": ${addressLocality},
+       "addressRegion": ${addressRegion},
+       "postalCode":${postalCode},
+       "streetAddress": ${streetAddress}
      	},
      	"description": "${desc}",
      	"name": "${title}",
@@ -90,11 +97,11 @@ export default function Head({ title: passedTitle }) {
        "logo": "${site}images/tlc-sq.png"
      	"geo": {
        "@type": "GeoCoordinates",
-       "latitude": "44.7337",
-       "longitude": "-63.8778"
+       "latitude": "${lat}",
+       "longitude": "${lng}"
     		},
      	"sameAs" : [ "https://www.facebook.com/tantallonlaserclinic/" ],
-       "hasMap": "https://www.google.com/maps/place/Tantallon+Laser+Clinic/@44.733702,-63.8778161,17z/data=!3m1!4b1!4m5!3m4!1s0x4b598d8ef04d6ee9:0x4b9fec1cd6367046!8m2!3d44.733702!4d-63.8756221"
+       "hasMap": "https://www.google.com/maps/place/Tantallon+Laser+Clinic/@${lat},${lng},${mapZoom}z"
     }`}
       </script>
     </Helmet>

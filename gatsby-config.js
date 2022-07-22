@@ -11,6 +11,13 @@ module.exports = {
       "Tantallon Laser Clinic provides professional, certified laser treatment in Nova Scotia",
     keywords:
       "TLC, Tantallon Laser Clinic, Laser Treatment, Certified Laser Technician, Skin Therapy, Tattoo Removal, Scar Removal, Laser Hair Removal, Beauty, Nova Scotia, Tantallon",
+    addressLocality: "Upper Tantallon",
+    addressRegion: "NS",
+    postalCode: "B3Z 0G4",
+    streetAddress: "570 Oceanstone Dr.",
+    lat: "44.7326692",
+    lng: "-63.8897772",
+    mapZoom: "17",
   },
   plugins: [
     {

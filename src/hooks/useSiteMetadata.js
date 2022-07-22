@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 
 /**
- * @returns {Record<'title' | 'description' | 'site' | 'primary_color' | 'email' | 'phone' | 'keywords', string>}
+ * @returns {Record<'title' | 'description' | 'site' | 'primary_color' | 'email' | 'phone' | 'keywords' | 'streetAddress' | 'addressLocality' | 'addressRegion' | 'postalCode' | 'lat' | 'lng' | 'mapZoom', string>}
  */
 const useSiteMetadata = () => {
   const {
@@ -18,6 +18,13 @@ const useSiteMetadata = () => {
             email
             phone
             keywords
+            streetAddress
+            addressLocality
+            addressRegion
+            postalCode
+            lat
+            lng
+            mapZoom
           }
         }
       }

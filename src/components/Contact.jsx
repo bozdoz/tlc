@@ -108,7 +108,20 @@ export default function Contact() {
     [fields]
   )
 
-  const { phone, email } = useSiteMetadata()
+  const {
+    phone,
+    email,
+    addressLocality,
+    addressRegion,
+    postalCode,
+    streetAddress,
+  } = useSiteMetadata()
+
+  const address =
+    `${streetAddress}, ${addressLocality}, ${addressRegion} ${postalCode}`.replace(
+      /\s/g,
+      "+"
+    )
 
   return (
     <>
@@ -137,14 +150,14 @@ export default function Contact() {
                 width="100%"
                 frameBorder="0"
                 style={{ border: 0 }}
-                src={`https://www.google.com/maps/embed/v1/place?key=${GATSBY_GOOGLE_MAPS_KEY}&q=Tantallon+Laser+Clinic`}
+                src={`https://www.google.com/maps/embed/v1/place?key=${GATSBY_GOOGLE_MAPS_KEY}&q=${address}`}
                 allowFullScreen
               ></iframe>
               <p>
                 <b>Pat Bergman</b> <br />{" "}
                 <i>Owner/Certified Laser Technician</i>
-                <br /> 1033 Westwood Blvd. <br /> Upper Tantallon, NS <br /> B3Z
-                0H5
+                <br /> {streetAddress} <br /> {addressLocality}, {addressRegion}{" "}
+                <br /> {postalCode}
               </p>
               <p>
                 <a href={`tel:${phone}`}>

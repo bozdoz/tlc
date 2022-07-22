@@ -1,5 +1,6 @@
 import React from "react"
 import useSiteMetadata from "../hooks/useSiteMetadata"
+import Banner from "./Banner"
 
 export default function Header() {
   const { title } = useSiteMetadata()
@@ -15,6 +16,7 @@ export default function Header() {
         <div id="header-image" />
         <div id="header-fg-gradient" />
         <nav id="main-navigation" className="navbar navbar-fixed-top">
+          <Banner />
           <div className="container">
             <div className="navbar-header">
               <button
