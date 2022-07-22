@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react"
 
-const bannerKey = "moving2022-33"
+const bannerKey = "moving2022"
 // october 1, 2022
 const bannerDate = new Date(2022, 10, 1)
 
