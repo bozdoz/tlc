@@ -83,10 +83,10 @@ export default function Head({ title: passedTitle }) {
      	"@type": "LocalBusiness",
      	"address": {
        "@type": "PostalAddress",
-       "addressLocality": ${addressLocality},
-       "addressRegion": ${addressRegion},
-       "postalCode":${postalCode},
-       "streetAddress": ${streetAddress}
+       "addressLocality": "${addressLocality}",
+       "addressRegion": "${addressRegion}",
+       "postalCode": "${postalCode}",
+       "streetAddress": "${streetAddress}"
      	},
      	"description": "${desc}",
      	"name": "${title}",
