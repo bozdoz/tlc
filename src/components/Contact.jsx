@@ -115,10 +115,12 @@ export default function Contact() {
     addressRegion,
     postalCode,
     streetAddress,
+    streetAddressLine2,
+    addressPublicName,
   } = useSiteMetadata()
 
   const address =
-    `${streetAddress}, ${addressLocality}, ${addressRegion} ${postalCode}`.replace(
+    `${streetAddress}, ${streetAddressLine2}, ${addressLocality}, ${addressRegion} ${postalCode}`.replace(
       /\s/g,
       "+"
     )
@@ -153,12 +155,24 @@ export default function Contact() {
                 src={`https://www.google.com/maps/embed/v1/place?key=${GATSBY_GOOGLE_MAPS_KEY}&q=${address}`}
                 allowFullScreen
               ></iframe>
-              <p>
-                <b>Pat Bergman</b> <br />{" "}
-                <i>Owner/Certified Laser Technician</i>
-                <br /> {streetAddress} <br /> {addressLocality}, {addressRegion}{" "}
-                <br /> {postalCode}
-              </p>
+              <div>
+                <br />
+                <div>
+                  <b>Pat Bergman</b>
+                </div>
+                <div>
+                  <i>Owner/Certified Laser Technician</i>
+                </div>
+                <br />
+                {addressPublicName ? <div>{addressPublicName}</div> : null}
+                <div>{streetAddress}</div>
+                {streetAddressLine2 ? <div>{streetAddressLine2}</div> : null}
+                <div>
+                  {addressLocality} {addressRegion}
+                </div>
+                <div>{postalCode}</div>
+                <br />
+              </div>
               <p>
                 <a href={`tel:${phone}`}>
                   <span className="glyphicon glyphicon-earphone"></span>
