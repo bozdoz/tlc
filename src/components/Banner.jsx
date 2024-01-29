@@ -1,8 +1,9 @@
 import React, { useCallback, useState } from "react"
+import useSiteMetadata from "../hooks/useSiteMetadata"
 
-const bannerKey = "moving2022"
-// october 1, 2022
-const bannerDate = new Date(2022, 10, 1)
+const bannerKey = "moving2024"
+// Mar 15, 2024
+const bannerDate = new Date(2024, 2, 15)
 
 const safeLocalStorage = (() => {
   /** @type {Storage} */
@@ -18,6 +19,7 @@ const safeLocalStorage = (() => {
 })()
 
 const Banner = () => {
+  const { streetAddress } = useSiteMetadata()
   const [bannerVisible, setBannerVisible] = useState(
     !safeLocalStorage.getItem(bannerKey)
   )
@@ -34,7 +36,7 @@ const Banner = () => {
     bannerVisible && (
       <a id="banner" onClick={handleClick} href="#contact">
         <strong>We've moved!</strong> &nbsp; Find us at &nbsp;
-        <strong>570 Oceanstone Drive</strong>
+        <strong>{streetAddress}</strong>
       </a>
     )
   )

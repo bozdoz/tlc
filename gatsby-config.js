@@ -1,5 +1,8 @@
 require("dotenv").config()
 
+/**
+ * Cornerstone Natural pathic ., a Upper Tantallon B3Z 2J6
+ */
 module.exports = {
   siteMetadata: {
     title: "Tantallon Laser Clinic",
@@ -13,12 +16,12 @@ module.exports = {
       "TLC, Tantallon Laser Clinic, Laser Treatment, Certified Laser Technician, Skin Therapy, Tattoo Removal, Scar Removal, Laser Hair Removal, Beauty, Nova Scotia, Tantallon",
     addressLocality: "Upper Tantallon",
     addressRegion: "NS",
-    postalCode: "B3Z 4R3",
-    addressPublicName: "Personal Image Hair Studio",
-    streetAddress: "3650 Hammonds Plains Road",
-    streetAddressLine2: "Unit 140",
-    lat: "44.7326692",
-    lng: "-63.8897772",
+    postalCode: "B3Z 2J6",
+    addressPublicName: "Cornerstone Naturopathic",
+    streetAddress: "14 Old School Road",
+    streetAddressLine2: "",
+    lat: "44.68434613814297",
+    lng: "-63.88717489452382",
     mapZoom: "17",
   },
   plugins: [
