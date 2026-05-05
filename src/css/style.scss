@@ -16,18 +16,22 @@ $purple: #7d5c9e;
 .btn-primary {
   background-color: $brand_primary;
   border-color: darken($brand_primary, 5%);
+
   &:hover {
     background-color: darken($brand_primary, 5%);
     border-color: darken($brand_primary, 10%);
   }
+
   &:active {
     background-color: darken($brand_primary, 8%);
     border-color: darken($brand_primary, 12%);
   }
+
   &:focus {
     background-color: darken($brand_primary, 8%);
     border-color: darken($brand_primary, 12%);
   }
+
   &:active:focus {
     background-color: darken($brand_primary, 8%);
     border-color: darken($brand_primary, 12%);
@@ -158,23 +162,24 @@ h1 {
 
 #header-bg-gradient {
   background-color: $pale_cerulean;
-  background-image: linear-gradient(
-    135deg,
-    lighten(adjust-hue($pale_cerulean, -40deg), 16%),
-    $pale_cerulean
-  );
+  background-image: linear-gradient(135deg,
+      lighten(adjust-hue($pale_cerulean, -40deg), 16%),
+      $pale_cerulean );
 }
 
 .jumbotron {
   margin-bottom: 15px;
   padding: 15px;
+
   p {
     font-weight: 400;
   }
+
   .row {
     margin-top: 0;
     margin-bottom: 0;
   }
+
   .btn {
     margin: 0 auto;
     display: block;
@@ -195,6 +200,7 @@ h1 {
     max-width: 900px;
     display: flex;
     justify-content: center;
+
     .button-over-image {
       bottom: 0.5em;
       border-radius: 10px;
@@ -282,11 +288,13 @@ $logoheight: 100px;
     right: 0;
     font-size: 20pt;
     border-radius: none;
+
     .icon-bar {
       background: $light_gray;
       margin-left: auto;
       margin-right: auto;
     }
+
     &:hover,
     &:focus {
       background-color: lighten($logo_teal, 5%);
@@ -327,6 +335,7 @@ $logoheight: 100px;
   li {
     height: 100%;
     position: relative;
+
     a {
       top: 0;
       height: 100%;
@@ -336,6 +345,7 @@ $logoheight: 100px;
       transition: all 0.2s;
       text-transform: uppercase;
       color: $light_gray;
+
       &:hover,
       &:focus {
         background-color: lighten($light_teal, 3%);
@@ -347,10 +357,12 @@ $logoheight: 100px;
 .site-title {
   font-weight: bold;
 }
+
 .site-description {
   font-size: 22pt;
   margin: 0;
 }
+
 .site-title,
 .site-description {
   text-align: center;
@@ -360,7 +372,8 @@ $logoheight: 100px;
   .row {
     padding-top: 1em;
     padding-bottom: 1em;
-    & > * {
+
+    &>* {
       padding-top: 1.5em;
       padding-bottom: 1.5em;
     }
@@ -386,24 +399,25 @@ $special_color: $pearl_aqua;
 
 .page-specials {
   background: $special_color;
-  background: linear-gradient(
-    -135deg,
-    $special_color,
-    adjust-hue($special_color, 55deg)
-  );
+  background: linear-gradient(-135deg,
+      $special_color,
+      adjust-hue($special_color, 55deg));
   color: white;
   font-weight: bold;
   padding-bottom: 3em;
   min-height: 70vh;
+
   .special-offer {
     color: #444;
     background: white;
+    background-size: cover;
     padding: 1em 2em;
     border-radius: 0.5em;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 3px;
     margin-bottom: 3em;
   }
+
   &:last-child .special-offer {
     margin-bottom: 0;
   }
@@ -433,11 +447,13 @@ $special_color: $pearl_aqua;
   flex-flow: row no-wrap;
   justify-content: space-between;
 
-  & > .wrapper {
+  &>.wrapper {
     margin: 0 auto;
+
     h2 {
       margin-top: 0;
     }
+
     p:last-child {
       margin-bottom: 0;
     }
@@ -458,18 +474,19 @@ $special_color: $pearl_aqua;
 }
 
 $about_color: $purple;
+
 .page-about {
   background: $about_color;
   background-repeat: repeat-x;
-  background-image: linear-gradient(
-    -45deg,
-    adjust-hue($about_color, -50deg),
-    $about_color
-  );
+  background-image: linear-gradient(-45deg,
+      adjust-hue($about_color, -50deg),
+      $about_color );
   color: white;
+
   p {
     color: white;
   }
+
   min-height: 80vh;
 }
 
@@ -480,6 +497,7 @@ $about_color: $purple;
   border: none;
   text-align: center;
 }
+
 .page-content {
   max-width: 600px;
   margin: 0 auto;
@@ -488,6 +506,7 @@ $about_color: $purple;
 .article-title {
   font-weight: bold;
 }
+
 .article-subtitle {
   margin-top: 0;
 }
@@ -518,10 +537,12 @@ iframe {
 /* contact  */
 #contact-form {
   padding-top: 2em;
+
   h3 {
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.4em;
   }
+
   label {
     padding-top: 0;
   }
@@ -531,6 +552,7 @@ $footerpurple: desaturate(darken(adjust-hue($purple, -10deg), 12%), 6%);
 
 #footer {
   background-color: $footerpurple;
+
   .nav.navbar-nav {
     font-size: 14pt;
     margin: 0;
@@ -540,6 +562,7 @@ $footerpurple: desaturate(darken(adjust-hue($purple, -10deg), 12%), 6%);
     align-content: center;
     align-items: center;
     width: 100%;
+
     li {
       float: none;
       width: 100%;
@@ -549,6 +572,7 @@ $footerpurple: desaturate(darken(adjust-hue($purple, -10deg), 12%), 6%);
         color: white;
         text-align: center;
         border-top: 1px solid darken($footerpurple, 6%);
+
         &:hover {
           background-color: darken($footerpurple, 2%);
         }
@@ -564,6 +588,7 @@ $footerpurple: desaturate(darken(adjust-hue($purple, -10deg), 12%), 6%);
   left: 1em;
   right: 1em;
   line-height: 16pt;
+
   .message-box {
     max-width: 500px;
     margin-left: auto;
@@ -576,23 +601,27 @@ $footerpurple: desaturate(darken(adjust-hue($purple, -10deg), 12%), 6%);
   #main-navigation .container {
     padding: 0 1em;
   }
+
   .navbar-nav li a {
     padding: 1em 2em;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .navbar-right {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
   }
+
   #main {
     .row {
       padding-bottom: 2.5em;
     }
   }
+
   .jumbotron {
     .btn {
       margin: initial;
@@ -608,13 +637,16 @@ $footerpurple: desaturate(darken(adjust-hue($purple, -10deg), 12%), 6%);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    & > * {
+
+    &>* {
       flex: 1 0 50%;
+
       &:last-child {
         align-self: center;
       }
     }
   }
+
   .page-header {
     text-align: left;
   }
@@ -627,35 +659,44 @@ $footerpurple: desaturate(darken(adjust-hue($purple, -10deg), 12%), 6%);
     line-height: 1.4;
     margin-bottom: 0.7em;
   }
+
   #main-navigation .navbar-brand {
     max-width: 100%;
   }
+
   .side-img {
     display: block;
     flex: 1 1 auto;
   }
+
   .content-home {
     .wrapper {
       flex: 0 0 50%;
       padding: 0 3em;
+
       .container-fluid {
         max-width: 600px;
       }
     }
   }
+
   #footer {
     .nav.navbar-nav {
       flex-flow: row nowrap;
       justify-content: flex-start;
       width: 100%;
+
       li {
         flex: 0 1 100px;
+
         a {
           border: none;
           padding: 1em 2em;
         }
+
         &:last-child {
           flex: 0 2 200px;
+
           a {
             display: flex;
             align-items: center;
@@ -664,30 +705,38 @@ $footerpurple: desaturate(darken(adjust-hue($purple, -10deg), 12%), 6%);
       }
     }
   }
+
   .page-home .page-content {
     max-width: 100%;
   }
 }
+
 /* max */
 @media screen and (max-width: 62em) {
   #main-navigation {
     .navbar-header {
       float: none;
     }
+
     .navbar-toggle {
       display: block;
     }
+
     .navbar-collapse {
       display: none !important;
     }
+
     .navbar-collapse.in {
       display: block !important;
+
       .navbar-nav {
         position: relative !important;
       }
     }
+
     li {
       float: none !important;
+
       a {
         border-top: 1px solid darken($light_teal, 7%);
       }

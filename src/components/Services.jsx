@@ -38,7 +38,7 @@ export default function Services() {
                 </p>
                 <h2>Photo Rejuvenation</h2>
                 <p>
-                  Photo Rejuvenation is a procedure where
+                  Photo Rejuvenation is a procedure where{' '}
                   <abbr title="Intense Pulsed Light">IPL</abbr> is used to
                   diminish imperfections in the skin, including treatment for
                   skin pigmentation, sun damage, thread veins, rosacea, acme and

@@ -3,10 +3,21 @@ import React from "react"
 // TODO: move to config, and optionally hide Specials in nav
 const specials = [
   {
-    header: "IPL Photo Rejuvenation",
-    details: `Rejuvenate your skin after the summer sun! Hydrate, repair, and restore your glow with nourishing care that helps your skin bounce back from UV exposure and is a perfect solution for rosacea. Because healthy, radiant skin is always in season.
-    $80 PER SESSION
-    IPL the perfect solution for rosacea`,
+    header: "Mothers Day",
+    details: `Gift cards available now!`,
+    button: "Contact Us",
+    style: {
+      backgroundImage: "url(/images/mothers-floral.png)",
+      minHeight: 300,
+      display: 'flex',
+      flexFlow: 'column nowrap',
+      justifyContent: 'center',
+    }
+  },
+  {
+    header: "IPL Photo Rejuvenation Special",
+    details: `Start your summer with a fresh, even skin tone
+    $75 PER SESSION`,
   },
 ]
 
@@ -22,8 +33,8 @@ export default function Specials() {
               <h3 className="article-subtitle">Act now and save!</h3>
             </header>
             <div className="page-content">
-              {specials.map(({ header, details }, i) => (
-                <div className="special-offer" key={i}>
+              {specials.map(({ header, details, button, style }, i) => (
+                <div className="special-offer" key={i} style={style}>
                   <h2>{header}</h2>
                   <p
                     dangerouslySetInnerHTML={{
@@ -32,7 +43,7 @@ export default function Specials() {
                   />
                   <p>
                     <a className="btn btn-primary btn-lg" href="#contact">
-                      Click here
+                       {button ?? "Book Today!"}
                     </a>
                   </p>
                 </div>

@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import useSiteMetadata from "../hooks/useSiteMetadata"
 import Banner from "./Banner"
 
 export default function Header() {
   const { title } = useSiteMetadata()
+  const [open, setOpen] = useState(false)
 
   return (
     <>
@@ -26,6 +27,7 @@ export default function Header() {
                 data-target="#navbar"
                 aria-expanded="false"
                 aria-controls="navbar"
+                onClick={() => setOpen(open => !open)}
               >
                 <span className="sr-only">Toggle navigation</span>
                 <span className="icon-bar" />
@@ -36,7 +38,7 @@ export default function Header() {
                 <span className="logo">{title}</span>
               </a>
             </div>
-            <div id="navbar" className="navbar-collapse collapse">
+            <div id="navbar" className={`navbar-collapse collapse ${open ? 'in' : ''}`}>
               <ul className="nav navbar-nav navbar-right">
                 <li>
                   <a href="#specials">Specials</a>

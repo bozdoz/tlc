@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from "react"
 import useSiteMetadata from "../hooks/useSiteMetadata"
 
-const bannerKey = "moving2024"
-// Mar 15, 2024
-const bannerDate = new Date(2024, 2, 15)
+const bannerKey = "mothers2026-1"
+// May 30
+const bannerDate = new Date(2026, 5-1, 30)
 
 const safeLocalStorage = (() => {
   /** @type {Storage} */
@@ -35,8 +35,7 @@ const Banner = () => {
     shouldShow &&
     bannerVisible && (
       <a id="banner" onClick={handleClick} href="#contact">
-        <strong>We've moved!</strong> &nbsp; Find us at &nbsp;
-        <strong>{streetAddress}</strong>
+        <strong>Mother's Day gift cards available now!</strong>
       </a>
     )
   )
