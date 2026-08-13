@@ -1,9 +1,6 @@
 import React, { useState } from "react"
-import useSiteMetadata from "../hooks/useSiteMetadata"
-import Banner from "./Banner"
 
 export default function Header() {
-  const { title } = useSiteMetadata()
   const [open, setOpen] = useState(false)
 
   return (
@@ -12,49 +9,43 @@ export default function Header() {
       <a href="#main" className="sr-only sr-only-focusable">
         Skip to main content
       </a>
-      <header id="header" className="header">
-        <div id="header-bg-gradient" />
-        <div id="header-image" />
-        <div id="header-fg-gradient" />
-        <nav id="main-navigation" className="navbar navbar-fixed-top">
-          <Banner />
-          <div className="container">
-            <div className="navbar-header">
-              <button
-                type="button"
-                className="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#navbar"
-                aria-expanded="false"
-                aria-controls="navbar"
-                onClick={() => setOpen(open => !open)}
-              >
-                <span className="sr-only">Toggle navigation</span>
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-              </button>
-              <a className="navbar-brand" href="#top">
-                <span className="logo">{title}</span>
-              </a>
-            </div>
-            <div id="navbar" className={`navbar-collapse collapse ${open ? 'in' : ''}`}>
-              <ul className="nav navbar-nav navbar-right">
-                <li>
-                  <a href="#specials">Specials</a>
-                </li>
-                <li>
-                  <a href="#contact">Contact</a>
-                </li>
-                <li>
-                  <a href="#about">About</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <div id="header-content">
-          <div className="container" />
+      <header id="header" className="site-header">
+        <div className="shell site-header-inner">
+          <a
+            className="brand"
+            href="#top"
+            aria-label="Tantallon Laser Clinic home"
+          >
+            <img
+              src="/images/tlc-logo-new.svg"
+              alt="Tantallon Laser Clinic"
+              className="brand-logo"
+            />
+          </a>
+          <button
+            type="button"
+            className="menu-toggle"
+            aria-expanded={open}
+            aria-controls="main-navigation"
+            onClick={() => setOpen(open => !open)}
+          >
+            <span className="sr-only">Toggle navigation</span>
+            <span />
+            <span />
+            <span />
+          </button>
+          <nav
+            id="main-navigation"
+            className={"site-nav" + (open ? " is-open" : "")}
+            aria-label="Main navigation"
+          >
+            <a href="#message" onClick={() => setOpen(false)}>
+              The update
+            </a>
+            <a href="#continuing-care" onClick={() => setOpen(false)}>
+              Continuing care
+            </a>
+          </nav>
         </div>
       </header>
     </>

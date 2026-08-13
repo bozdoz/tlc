@@ -11,7 +11,7 @@ module.exports = {
     email: "tantallonlaser@gmail.com",
     phone: "1-902-579-9403",
     description:
-      "Tantallon Laser Clinic provides professional, certified laser treatment in Nova Scotia",
+      "Tantallon Laser Clinic has closed after 16 years. Information about continuing care is available for existing clients.",
     keywords:
       "TLC, Tantallon Laser Clinic, Laser Treatment, Certified Laser Technician, Skin Therapy, Tattoo Removal, Scar Removal, Laser Hair Removal, Beauty, Nova Scotia, Tantallon",
     addressLocality: "Upper Tantallon",

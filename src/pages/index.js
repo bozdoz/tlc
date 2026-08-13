@@ -1,11 +1,9 @@
 import React from "react"
-import About from "../components/About"
-import Contact from "../components/Contact"
+import Continuation from "../components/Continuation"
+import ClosureNotice from "../components/ClosureNotice"
 import Footer from "../components/Footer"
 import Head from "../components/Head"
 import Header from "../components/Header"
-import Services from "../components/Services"
-import Specials from "../components/Specials"
 
 export default function Home() {
   return (
@@ -13,10 +11,8 @@ export default function Home() {
       <Head />
       <Header />
       <main id="main" className="main">
-        <Services />
-        <Specials />
-        <Contact />
-        <About />
+        <ClosureNotice />
+        <Continuation />
       </main>
       <Footer />
     </>
